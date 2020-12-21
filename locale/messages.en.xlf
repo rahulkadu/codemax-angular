@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="loginHeader" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="loginUsername" datatype="html">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="loginPassword" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="loginButton2" datatype="html">
+        <source>Not a user? Register now..</source>
+        <target>Not a user? Register now..</target>
+      </trans-unit>
+      <trans-unit id="loginButton3" datatype="html">
+        <source>Admin login</source>
+        <target>Admin login</target>
+      </trans-unit>
+
+
+
+
+      <trans-unit id="RegisterHeader" datatype="html">
+        <source>Register</source>
+        <target>Register</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterUsername" datatype="html">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterEmail" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterPassword" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterConfirmPassword" datatype="html">
+        <source>Confirm Password</source>
+        <target>Confirm Password</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterButton" datatype="html">
+        <source>Register</source>
+        <target>Register</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterButton2" datatype="html">
+        <source>Already a user? Login here..</source>
+        <target>Already a user? Login here..</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminLoginHeader" datatype="html">
+        <source>Admin Login</source>
+        <target>Admin Login</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginUsername" datatype="html">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginPassword" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+
+      <trans-unit id="AdminLoginButton" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginButton2" datatype="html">
+        <source>Not an admin? Try user login..</source>
+        <target>Not an admin? Try user login..</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginButton3" datatype="html">
+        <source>Or register as user..</source>
+        <target>Or register as user..</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminAddProduct" datatype="html">
+        <source>Add Product</source>
+        <target>Add Product</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminProductName" datatype="html">
+        <source>Product Name</source>
+        <target>Product Name</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminDescription" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="AdminQuantity" datatype="html">
+        <source>Quantity</source>
+        <target>Quantity</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminAmount" datatype="html">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminImage" datatype="html">
+        <source>Image</source>
+        <target>Image</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminAdd" datatype="html">
+        <source>Add</source>
+        <target>Add</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminProductsHeader" datatype="html">
+        <source>Products</source>
+        <target>Products</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminProductsNotFound" datatype="html">
+        <source>No Products found.</source>
+        <target>No Products found.</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminDashboardSearch" datatype="html">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+
+      <trans-unit id="AdminDashboardProducts" datatype="html">
+        <source>Products</source>
+        <target>Products</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminDashboardAddProduct" datatype="html">
+        <source>Add Product</source>
+        <target>Add Product</target>
+      </trans-unit>
+
+      <trans-unit id="AdminDashboardLogout" datatype="html">
+        <source>Logout</source>
+        <target>Logout</target>
+      </trans-unit>
+
+
+
+      <trans-unit id="DashboardSearch" datatype="html">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardHome" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardProducts" datatype="html">
+        <source>Products</source>
+        <target>Products</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardCompany" datatype="html">
+        <source>Company</source>
+        <target>Company</target>
+      </trans-unit>
+
+      <trans-unit id="DashboardContact" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardLogout" datatype="html">
+        <source>Logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      
+
+
+
+
+      <trans-unit id="UserItemsCount" datatype="html">
+        <source>Items</source>
+        <target>Items</target>
+      </trans-unit>
+      
+      <trans-unit id="UserClearCart" datatype="html">
+        <source>clear cart</source>
+        <target>clear cart</target>
+      </trans-unit>
+      
+      <trans-unit id="UserProducts" datatype="html">
+        <source>Products</source>
+        <target>Products</target>
+      </trans-unit>
+      
+      <trans-unit id="UserProductsNotFound" datatype="html">
+        <source>No Products found.</source>
+        <target>No Products found.</target>
+      </trans-unit>
+      
+      <trans-unit id="AddToCart" datatype="html">
+        <source>Add To Cart</source>
+        <target>Add To Cart</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminContactUsHeader" datatype="html">
+        <source>Contact Us</source>
+        <target>Contact Us</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsEmail" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsMessage" datatype="html">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsSubmit" datatype="html">
+        <source>Submit</source>
+        <target>Submit</target>
+      </trans-unit>
+
+
+
+
+
+      <trans-unit id="ddd" datatype="html">
+        <source>asd</source>
+        <target>sss</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

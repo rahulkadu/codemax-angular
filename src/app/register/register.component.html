@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    
+    <div class="card mt-4 box-shadow">
+      <div class="card-body">
+      	<h3 class="text-center" i18n="Register Header|demo@@RegisterHeader">Register</h3>
+        <div class="form-group">
+          <label for="username" class="col-form-label" i18n="Register Username|demo@@RegisterUsername">Username</label>
+          <input [(ngModel)]="username" type="input" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-form-label" i18n="Register Email|demo@@RegisterEmail">Email</label>
+          <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="Email"> 
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-form-label" i18n="Register Password|demo@@RegisterPassword">Password</label>
+          <input [(ngModel)]="password" type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="password_confirm" class="col-form-label" i18n="Register Confirm Password|demo@@RegisterConfirmPassword">Confirm Password</label>
+          <input [(ngModel)]="password_confirm" type="password" class="form-control" id="password_confirm" placeholder="Confirm Password">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" (click)="register()" i18n="Register Button|demo@@RegisterButton">Register</button>
+        <br><span (click)="navigateToPage('/login')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Register Button2|demo@@RegisterButton2">Already a user? Login here..</span>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    
+    <div class="card mt-4 box-shadow">
+      <div class="card-body">
+        <h3 class="text-center" i18n="Login Header|demo@@loginHeader">Login</h3>
+        <!-- <form> -->
+          <div class="form-group">
+            <label for="username" class="col-form-label" i18n="Login Username|demo@@loginUsername">Username</label>
+            <input [(ngModel)]="username" type="text" class="form-control" id="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-form-label" i18n="Login Password|demo@@loginPassword">Password</label>
+            <input [(ngModel)]="password" type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary mb-2" (click)="login()" i18n="Login Button|demo@@loginButton">Login</button>
+          <br><span (click)="navigateToPage('/register')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Login Button 2|demo@@loginButton2">Not a user? Register now..</span>
+          <br><span (click)="navigateToPage('/admin-login')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Login Button 3|demo@@loginButton3">Admin login</span>
+        <!-- </form> -->
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+

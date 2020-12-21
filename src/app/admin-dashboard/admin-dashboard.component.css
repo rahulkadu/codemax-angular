@@ -1,0 +1,53 @@
+.header-contt {
+  padding:5px;
+}
+.logo-image {
+  width: 200px;
+  height: 70px;
+}
+.search-button {
+  background-color: #212529;
+  color: white;
+}
+.example-container {
+  background: #eee;
+}
+
+.active-menu-bg {
+  background-color: #00b2ff47;
+}
+
+.active-menu {
+  color: #262676 !important;
+  font-weight: 600 !important;
+}
+
+.inactive-menu {
+  color: #000 !important;
+}
+
+.menu-li {
+  margin-right: 20px;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.cart-text {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.facebook-icon {
+  background-color: white;
+  color: #212529 ;
+}
+
+.main-outside {
+  padding: 20px 70px;
+}
+
+.main-header {
+  margin: 0 0 25px 0;
+}

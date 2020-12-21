@@ -1,0 +1,72 @@
+
+<div class="header-contt">
+
+  <div class="row">
+    <div class="col-md-3">
+      <img class="card-img-top logo-image" src="https://picsum.photos/200/300">
+    </div>
+    <div class="col-md-5 mt-2">
+      <input class="form-control mr-sm-2 search-input" type="text" placeholder="Search here" aria-label="Search">
+    </div>
+    <div class="col-md-1 mt-2">
+      <button class="btn search-button my-2 my-sm-0" type="submit" i18n="Admin Dashboard Search|demo@@AdminDashboardSearch">Search</button>
+    </div>
+    <div class="col-md-3">
+      <!-- <span class="float-right cart-text">3 Items / $123</span> -->
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item menu-li">
+        <a class="nav-link" [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active':''" (click)="navigateToPage('/admin-dashboard/products')" i18n="Admin Dashboard Products|demo@@AdminDashboardProducts">Products</a>
+      </li>
+      <li class="nav-item menu-li">
+        <a class="nav-link" [ngClass]="(currentRoute=='/admin-dashboard/add-product') ? 'active':''" (click)="navigateToPage('/admin-dashboard/add-product')" i18n="Admin Dashboard Add Product|demo@@AdminDashboardAddProduct">Add Product</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<mat-sidenav-container class="example-container" *ngIf="true">
+
+  <mat-sidenav #sidenav  [mode]="drawerMode" class="example-sidenav" [ngStyle]="{ 'width.em': 15 }" opened="true">
+
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/admin-dashboard/products')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active-menu':'inactive-menu'">production_quantity_limits</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Products|demo@@AdminDashboardProducts">Products</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/admin-dashboard/add-product')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/admin-dashboard/add-product') ? 'active-menu':'inactive-menu'">add</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/admin-dashboard/add-product') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Add Product|demo@@AdminDashboardAddProduct">Add Product</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="logout()" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/contact') ? 'active-menu':'inactive-menu'">arrow_back</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" i18n="Admin Dashboard Logout|demo@@AdminDashboardLogout">Logout</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: white !important;">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,97 @@
+
+<div class="header-contt">
+
+  <div class="row">
+    <div class="col-md-3">
+      <img class="card-img-top logo-image" src="https://picsum.photos/200/300">
+    </div>
+    <div class="col-md-5 mt-2">
+      <input class="form-control mr-sm-2 search-input" type="text" placeholder="Search here" aria-label="Search">
+    </div>
+    <div class="col-md-1 mt-2">
+      <button class="btn search-button my-2 my-sm-0" type="submit" i18n="Admin Dashboard|demo@@DashboardSearch">Search</button>
+    </div>
+    <div class="col-md-3">
+      <!-- <span class="float-right cart-text">{{cardNumber}} Items / ${{cardAmount}}</span> -->
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item menu-li">
+        <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+        <a class="nav-link" [ngClass]="(currentRoute=='/dashboard/home') ? 'active':''" (click)="navigateToPage('/dashboard/home')" i18n="Admin Dashboard Home|demo@@DashboardHome">Home</a>
+      </li>
+      <li class="nav-item menu-li">
+        <a class="nav-link" [ngClass]="(currentRoute=='/dashboard/products') ? 'active':''" (click)="navigateToPage('/dashboard/products')" i18n="Admin Dashboard Products|demo@@DashboardProducts">Products</a>
+      </li>
+      <li class="nav-item menu-li">
+        <a class="nav-link" [ngClass]="(currentRoute=='/dashboard/company') ? 'active':''" (click)="navigateToPage('/dashboard/company')" i18n="Admin Dashboard Company|demo@@DashboardCompany">Company</a>
+      </li>
+      <li class="nav-item menu-li">
+        <a class="nav-link" [ngClass]="(currentRoute=='/dashboard/contact') ? 'active':''" (click)="navigateToPage('/dashboard/contact')" i18n="Admin Dashboard Contact|demo@@DashboardContact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<mat-sidenav-container class="example-container" *ngIf="true">
+
+  <mat-sidenav #sidenav  [mode]="drawerMode" class="example-sidenav" [ngStyle]="{ 'width.em': 15 }" opened="true">
+
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/dashboard/home')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/home') ? 'active-menu':'inactive-menu'">home</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/dashboard/home') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Home|demo@@DashboardHome">Home</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/dashboard/products')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/products') ? 'active-menu':'inactive-menu'">production_quantity_limits</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/dashboard/products') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Products|demo@@DashboardProducts">Products</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/dashboard/company')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/company') ? 'active-menu':'inactive-menu'">business</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/dashboard/company') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Company|demo@@DashboardCompany">Company</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="navigateToPage('/dashboard/contact')" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/contact') ? 'active-menu':'inactive-menu'">person</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/dashboard/contact') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Contact|demo@@DashboardContact">Contact</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item (click)="logout()" routerLinkActive="active-menu-bg" >
+        <mat-icon mat-list-icon [ngClass]="(currentRoute=='/dashboard/contact') ? 'active-menu':'inactive-menu'">arrow_back</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h6 class="lead" style="margin-bottom: 0%" i18n="Admin Dashboard Logout|demo@@DashboardLogout">Logout</h6>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: white !important;">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

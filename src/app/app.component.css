@@ -1,0 +1,23 @@
+.lang-ul {
+  list-style-type: none;
+  /*margin: 0;
+  padding: 0;*/
+  /*position: fixed;
+  top:0px;
+  right:0px;*/
+}
+
+.lang-ul li {
+  display: inline;
+  float: right;
+}
+
+/*li {
+  float: left;
+}*/
+
+.lang-ul a {
+  display: block;
+  padding: 8px;
+  /*background-color: #dddddd;*/
+}

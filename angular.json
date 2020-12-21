@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,7 +63,25 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "hi": { 
+                "aot": true,
+                "outputPath": "dist/hi/",
+                "i18nFile": "locale/messages.hi.xlf",
+                "i18nFormat": "xlf",
+                "i18nLocale": "hi",
+                "i18nMissingTranslation": "error",
+                "baseHref": "/hi/"
+              },
+              "en": {
+                "aot": true,
+                "outputPath": "dist/en/",
+                "i18nFile": "locale/messages.en.xlf",
+                "i18nFormat": "xlf",
+                "i18nLocale": "en",
+                "i18nMissingTranslation": "error",
+                "baseHref": "/en/"
+              }
           }
         },
         "serve": {
@@ -68,6 +92,12 @@
           "configurations": {
             "production": {
               "browserTarget": "codemax-angular:build:production"
+            },
+            "hi": {
+              "browserTarget": "codemax-angular:build:hi"
+            },
+            "en": {
+              "browserTarget": "codemax-angular:build:en"
             }
           }
         },
@@ -89,7 +119,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           }
@@ -120,6 +152,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "codemax-angular"
 }

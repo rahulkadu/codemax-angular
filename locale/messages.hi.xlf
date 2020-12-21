@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="hi" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="loginHeader" datatype="html">
+        <source>Login</source>
+        <target>लॉगिन</target>
+      </trans-unit>
+      <trans-unit id="loginUsername" datatype="html">
+        <source>Username</source>
+        <target>यूजरनाम</target>
+      </trans-unit>
+      <trans-unit id="loginPassword" datatype="html">
+        <source>Password</source>
+        <target>पासवर्ड</target>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source>Login</source>
+        <target>लॉग इन करें</target>
+      </trans-unit>
+      <trans-unit id="loginButton2" datatype="html">
+        <source>Not a user? Register now..</source>
+        <target>उपयोगकर्ता नहीं है? अभी पंजीकरण करें..</target>
+      </trans-unit>
+      <trans-unit id="loginButton3" datatype="html">
+        <source>Admin login</source>
+        <target>व्यवस्थापक लॉगिन करें</target>
+      </trans-unit>
+
+
+
+
+      <trans-unit id="RegisterHeader" datatype="html">
+        <source>Register</source>
+        <target>रजिस्टर</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterUsername" datatype="html">
+        <source>Username</source>
+        <target>यूजरनाम</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterEmail" datatype="html">
+        <source>Email</source>
+        <target>ईमेल</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterPassword" datatype="html">
+        <source>Password</source>
+        <target>पासवर्ड</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterConfirmPassword" datatype="html">
+        <source>Confirm Password</source>
+        <target>कन्फर्म पासवर्ड</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterButton" datatype="html">
+        <source>Register</source>
+        <target>रजिस्टर करें</target>
+      </trans-unit>
+      
+      <trans-unit id="RegisterButton2" datatype="html">
+        <source>Already a user? Login here..</source>
+        <target>पहले से ही एक उपयोगकर्ता? यहां लॉगिन करें..</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminLoginHeader" datatype="html">
+        <source>Admin Login</source>
+        <target>व्यवस्थापक लॉगिन</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginUsername" datatype="html">
+        <source>Username</source>
+        <target>यूजरनाम</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginPassword" datatype="html">
+        <source>Password</source>
+        <target>पासवर्ड</target>
+      </trans-unit>
+
+      <trans-unit id="AdminLoginButton" datatype="html">
+        <source>Login</source>
+        <target>लॉग इन करें</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginButton2" datatype="html">
+        <source>Not an admin? Try user login..</source>
+        <target>व्यवस्थापक नहीं है? उपयोगकर्ता लॉगिन का प्रयास करें ..</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminLoginButton3" datatype="html">
+        <source>Or register as user..</source>
+        <target>या उपयोगकर्ता के रूप में पंजीकृत करें..</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminAddProduct" datatype="html">
+        <source>Add Product</source>
+        <target>उत्पाद जोड़ें</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminProductName" datatype="html">
+        <source>Product Name</source>
+        <target>उत्पाद का नाम</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminDescription" datatype="html">
+        <source>Description</source>
+        <target>विवरण</target>
+      </trans-unit>
+
+      <trans-unit id="AdminQuantity" datatype="html">
+        <source>Quantity</source>
+        <target>क्वांटिटी</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminAmount" datatype="html">
+        <source>Amount</source>
+        <target>अमाउंट</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminImage" datatype="html">
+        <source>Image</source>
+        <target>इमेज</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminAdd" datatype="html">
+        <source>Add</source>
+        <target>उत्पाद जोड़ें</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminProductsHeader" datatype="html">
+        <source>Products</source>
+        <target>उत्पादों की सूची</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminProductsNotFound" datatype="html">
+        <source>No Products found.</source>
+        <target>कोई उत्पाद नहीं मिला.</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminDashboardSearch" datatype="html">
+        <source>Search</source>
+        <target>सर्च</target>
+      </trans-unit>
+
+      <trans-unit id="AdminDashboardProducts" datatype="html">
+        <source>Products</source>
+        <target>उत्पादों की सूची</target>
+      </trans-unit>
+      
+      <trans-unit id="AdminDashboardAddProduct" datatype="html">
+        <source>Add Product</source>
+        <target>उत्पाद जोड़ें</target>
+      </trans-unit>
+
+      <trans-unit id="AdminDashboardLogout" datatype="html">
+        <source>Logout</source>
+        <target>लॉग आउट</target>
+      </trans-unit>
+
+
+
+      <trans-unit id="DashboardSearch" datatype="html">
+        <source>Search</source>
+        <target>सर्च</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardHome" datatype="html">
+        <source>Home</source>
+        <target>होम</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardProducts" datatype="html">
+        <source>Products</source>
+        <target>उत्पादों की सूची</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardCompany" datatype="html">
+        <source>Company</source>
+        <target>कंपनी</target>
+      </trans-unit>
+
+      <trans-unit id="DashboardContact" datatype="html">
+        <source>Contact</source>
+        <target>संपर्क करें</target>
+      </trans-unit>
+      
+      <trans-unit id="DashboardLogout" datatype="html">
+        <source>Logout</source>
+        <target>लॉग आउट</target>
+      </trans-unit>
+      
+
+
+
+
+      <trans-unit id="UserItemsCount" datatype="html">
+        <source>Items</source>
+        <target>Items</target>
+      </trans-unit>
+      
+      <trans-unit id="UserClearCart" datatype="html">
+        <source>clear cart</source>
+        <target>क्लियर कार्ट</target>
+      </trans-unit>
+      
+      <trans-unit id="UserProducts" datatype="html">
+        <source>Products</source>
+        <target>उत्पादों की सूची</target>
+      </trans-unit>
+      
+      <trans-unit id="UserProductsNotFound" datatype="html">
+        <source>No Products found.</source>
+        <target>कोई उत्पाद नहीं मिला.</target>
+      </trans-unit>
+      
+      <trans-unit id="AddToCart" datatype="html">
+        <source>Add To Cart</source>
+        <target>कार्ट में डालें</target>
+      </trans-unit>
+      
+
+
+
+      <trans-unit id="AdminContactUsHeader" datatype="html">
+        <source>Contact Us</source>
+        <target>संपर्क करें</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsEmail" datatype="html">
+        <source>Email</source>
+        <target>ईमेल</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsMessage" datatype="html">
+        <source>Message</source>
+        <target>संदेश</target>
+      </trans-unit>
+
+      <trans-unit id="AdminContactUsSubmit" datatype="html">
+        <source>Submit</source>
+        <target>सबमिट</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

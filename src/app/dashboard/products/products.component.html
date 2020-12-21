@@ -1,0 +1,31 @@
+<div class="main-outside">
+  <span class="float-right cart-text">{{cardNumber}} <ng-container i18n="User ItemsCount|demo@@UserItemsCount">Items</ng-container> / ${{cardAmount}}</span>
+  <br><span *ngIf="cardNumber > 0" (click)="clearCart()" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="User Clear Cart|demo@@UserClearCart">clear cart</span>
+	<h1 class="main-header" i18n="User Products|demo@@UserProducts">Products</h1>
+	
+  <div class="container" style="min-height: 300px;">
+
+    <div class="row">
+
+      <div class="col-md-12"  *ngIf="productsList.length == 0">
+        <h3 i18n="User Products Not Found|demo@@UserProductsNotFound">No Products found.</h3>
+      </div>
+
+      <div class="col-md-4"  *ngFor="let data of productsList">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top product-image" src="{{data.url}}">
+          <div class="card-body">
+            <p class="card-text">{{data.name}} / ${{data.amount}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+               <button (click)="addToCart(data)" type="button" style="width:100%;" class="btn btn-sm btn-outline-secondary" i18n="User Products Add To Cart|demo@@AddToCart">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
