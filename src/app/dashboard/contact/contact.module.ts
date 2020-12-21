@@ -7,12 +7,15 @@ import { ContactComponent } from './contact.component';
 import { AppService } from '../../app.service';
 import { FormsModule } from '@angular/forms';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [ContactComponent],
   imports: [
     CommonModule,
     ContactRoutingModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [AppService],
 })

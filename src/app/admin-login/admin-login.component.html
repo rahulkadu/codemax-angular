@@ -15,8 +15,10 @@
             <label for="password" class="col-form-label" i18n="Admin Login Password|demo@@AdminLoginPassword">Password</label>
               <input [(ngModel)]="password" type="password" class="form-control" id="password" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-primary mb-2" (click)="login()" i18n="Admin Login Button|demo@@AdminLoginButton">Login</button>
+          <button type="submit" [disabled]="loader" style="float:left;" class="btn btn-primary mb-2" (click)="login()" i18n="Admin Login Button|demo@@AdminLoginButton">Login</button><mat-spinner [diameter]="20" style="float:left;" *ngIf="loader"></mat-spinner>
+
           <br><span (click)="navigateToPage('/login')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Admin Login Button2|demo@@AdminLoginButton2">Not an admin? Try user login..</span>
+
           <br><span (click)="navigateToPage('/register')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Admin Login Button3|demo@@AdminLoginButton3">Or register as user..</span>
         <!-- </form> -->
       </div>

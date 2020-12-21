@@ -40,9 +40,11 @@
         <mat-icon mat-list-icon [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active-menu':'inactive-menu'">production_quantity_limits</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
-          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Products|demo@@AdminDashboardProducts">Products</h6>
+          <h6 class="lead" style="margin-bottom: 0%" [ngClass]="(currentRoute=='/admin-dashboard/products') ? 'active-menu':'inactive-menu'" i18n="Admin Dashboard Products|demo@@AdminDashboardProducts">Products </h6>
         </div>
+        <!-- <div class="numberCircle">30</div> -->
       </mat-list-item>
+
     </mat-nav-list>
     <mat-nav-list>
       <mat-list-item (click)="navigateToPage('/admin-dashboard/add-product')" routerLinkActive="active-menu-bg" >

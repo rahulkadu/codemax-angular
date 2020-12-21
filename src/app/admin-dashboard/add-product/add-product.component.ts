@@ -6,6 +6,10 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router, Event, NavigationStart } from '@angular/router';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -18,55 +22,51 @@ export class AddProductComponent implements OnInit {
   quantity: string = '';
   amount: string = '';
   image: string = '';
- 
+
+  loader: boolean = false;
 
   constructor(public appService: AppService, private toastr: ToastrService,private router: Router) { }
 
   ngOnInit() {
   }
 
-  // upload(file: File): Observable<HttpEvent<any>> {
-
   fileName: any = '';
-    myFiles:string [] = [];
-    imageUrl: string = '';
-
+  myFiles:string [] = [];
+  imageUrl: string = '';
 
   addImage(e) {
-        this.fileName = e.target.files[0].name;
-        console.log('fileName', this.fileName);
-        for (var i = 0; i < e.target.files.length; i++) { 
-            this.myFiles.push(e.target.files[i]);
-        }
-        // this.addPatientUploadImage();
-
-      console.log('myFiles', this.myFiles);
+    this.fileName = e.target.files[0].name;
+    console.log('fileName', this.fileName);
+    for (var i = 0; i < e.target.files.length; i++) { 
+        this.myFiles.push(e.target.files[i]);
     }
+    console.log('myFiles', this.myFiles);
+  }
 
-  // add = () => {
-    addProduct() {
-      const formData: FormData = new FormData();
+  addProduct() {
 
-      formData.append('name', this.name);
-      formData.append('description', this.description);
-      formData.append('quantity', this.quantity);
-      formData.append('amount', this.amount);
-      formData.append('image', this.myFiles[0]);
+    this.loader = true;
 
-      // console.log('file', file);
-      console.log('formData', formData);
-        // let params = { name: this.name, description: this.description, quantity: this.quantity, amount: this.amount, image: this.image }
-        this.appService.addProduct(formData).subscribe((res: any) => {
+    const formData: FormData = new FormData();
+    formData.append('name', this.name);
+    formData.append('description', this.description);
+    formData.append('quantity', this.quantity);
+    formData.append('amount', this.amount);
+    formData.append('image', this.myFiles[0]);
 
-          // localStorage.setItem('adminToken',res.token);
+    console.log('formData', formData);
 
-          this.toastr.success('Product Added Successfully', '');
+    this.appService.addProduct(formData).subscribe((res: any) => {
 
-           this.router.navigate(['admin-dashboard/products']);
-        }, (err) => {
-                console.log(err);
-                this.toastr.error(err.error.message, 'Error Occured');
-        });
-    }
+      this.loader = false;
+      this.toastr.success('Product Added Successfully', '');
+      this.router.navigate(['admin-dashboard/products']);
 
+    }, (err) => {
+
+      console.log(err);
+      this.loader = false;
+      this.toastr.error(err.error.message, 'Error Occured');
+    });
+  }
 }

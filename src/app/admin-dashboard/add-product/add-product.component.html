@@ -13,21 +13,28 @@
                 <label for="product_name" class="col-form-label" i18n="Admin Product Name|demo@@AdminProductName">Product Name</label>
                 <input [(ngModel)]="name" type="text" class="form-control" id="product_name" placeholder="Enter name here..">
               </div>
+            </div>
+            <div class="col-md-6">
               <div class="form-group">
                 <label for="description" class="col-form-label" i18n="Admin Description|demo@@AdminDescription">Description</label>
                 <textarea [(ngModel)]="description" class="form-control" id="description" rows="3" placeholder="Enter description here.."></textarea>
               </div>
             </div>
+          </div>
+          <div class="row m-0">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="quanity" class="col-form-label" i18n="Admin Quantity|demo@@AdminQuantity">Quantity</label>
                 <input [(ngModel)]="quantity" type="number" class="form-control" id="quanity" placeholder="Enter quantity here..">
               </div>
+            </div>
+            <div class="col-md-6">
               <div class="form-group">
                 <label for="amount" class="col-form-label" i18n="Admin Amount|demo@@AdminAmount">Amount</label>
                 <input [(ngModel)]="amount" type="number" class="form-control" id="amount" placeholder="Enter amount here..">
               </div>
             </div>
+
             <div class="col-md-12">
               <div class="form-group">
                 <label for="product_image" class="col-form-label" i18n="Admin Image|demo@@AdminImage">Image</label>
@@ -37,7 +44,7 @@
           </div>
           <div class="row m-0">
             <div class="col-md-12 add-button">
-              <button type="submit" class="btn btn-primary" (click)="addProduct()" i18n="Admin Add|demo@@AdminAdd">Add</button>
+              <button style="float:left;" type="submit" class="btn btn-primary" (click)="addProduct()" i18n="Admin Add|demo@@AdminAdd" [disabled]="loader">Add</button><mat-spinner [diameter]="20" style="float:left;" *ngIf="loader"></mat-spinner>
             </div>
           </div>
         <!-- </form> -->

@@ -8,6 +8,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [AdminDashboardComponent],
@@ -15,7 +17,8 @@ import { AdminDashboardComponent } from './admin-dashboard.component';
     CommonModule,
     MaterialModules,
     MatSidenavModule,
-    AdminDashboardRoutingModule
+    AdminDashboardRoutingModule,
+    MatProgressSpinnerModule
   ]
 })
 export class AdminDashboardModule { }

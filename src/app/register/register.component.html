@@ -22,7 +22,8 @@
           <label for="password_confirm" class="col-form-label" i18n="Register Confirm Password|demo@@RegisterConfirmPassword">Confirm Password</label>
           <input [(ngModel)]="password_confirm" type="password" class="form-control" id="password_confirm" placeholder="Confirm Password">
         </div>
-        <button type="submit" class="btn btn-primary mb-2" (click)="register()" i18n="Register Button|demo@@RegisterButton">Register</button>
+        <button type="submit" [disabled]="loader" style="float:left;" class="btn btn-primary mb-2" (click)="register()" i18n="Register Button|demo@@RegisterButton">Register</button><mat-spinner [diameter]="20" style="float:left;" *ngIf="loader"></mat-spinner>
+
         <br><span (click)="navigateToPage('/login')" class="float-right cart-text" style="font-size: 14px;text-decoration: underline;cursor: pointer;" i18n="Register Button2|demo@@RegisterButton2">Already a user? Login here..</span>
 
       </div>

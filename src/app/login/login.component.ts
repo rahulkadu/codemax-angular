@@ -6,6 +6,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router, Event, NavigationStart } from '@angular/router';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,6 +21,7 @@ export class LoginComponent implements OnInit {
 
   username: string = '';
   password: string = '';
+  loader: boolean = false;
 
   // toasterConfig: any;
   // toasterconfig: ToasterConfig = new ToasterConfig({
@@ -32,40 +36,22 @@ export class LoginComponent implements OnInit {
   }
 
   login = () => {
-        let params = { username: this.username, password: this.password }
-        this.appService.userLogin(params).subscribe((res: any) => {
 
-          localStorage.setItem('userToken',res.token);
+    this.loader = true;
+    let params = { username: this.username, password: this.password }
+    this.appService.userLogin(params).subscribe((res: any) => {
 
-          this.toastr.success('Welcome', '');
+      this.loader = false;
+      localStorage.setItem('userToken',res.token);
+      this.toastr.success('Welcome', '');
+      this.router.navigate(['dashboard/home']);
 
-            // this.appService.getUserDetails().subscribe((res: any) => {
-
-
-            //   console.log(res);
-            //   var user1 = res.response;
-            //     localStorage.setItem('userDetails', JSON.stringify(user1));
-
-            //     this.toastr.success('Welcome', '');
-            
-                // setTimeout((router: Router) => {
-                    // this.router.navigateByUrl('/patients');
-
-                    // var page_link = user1.pages[0].link;
-
-                    // console.log('page_link', page_link);
-
-                    this.router.navigate(['dashboard/home']);
-                // }, 200);
-
-                // this.loader=false;
-
-
-        }, (err) => {
-                console.log(err);
-                this.toastr.error(err.error.message, 'Error Occured');
-        });
-    }
+    }, (err) => {
+      this.loader = false;
+      console.log(err);
+      this.toastr.error(err.error.message, 'Error Occured');
+    });
+   }
 
   navigateToPage = (path) => {
 

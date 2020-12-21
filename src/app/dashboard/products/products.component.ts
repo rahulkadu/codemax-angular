@@ -6,6 +6,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router, Event, NavigationStart } from '@angular/router';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -14,18 +17,23 @@ import { Router, Event, NavigationStart } from '@angular/router';
 export class ProductsComponent implements OnInit {
 
   productsList:any = [];
+  loader: boolean = false;
   
   constructor(public appService: AppService, private toastr: ToastrService,private router: Router) { }
 
   ngOnInit() {
 
+    this.loader = true;
   	this.appService.getProductsUser().subscribe((res: any) => {
-
+      
+      this.loader = false;
   		this.productsList = res.products;
           
     }, (err) => {
-            console.log(err);
-            this.toastr.error(err.error.message, 'Error Occured');
+
+      this.loader = false;
+      console.log(err);
+      this.toastr.error(err.error.message, 'Error Occured');
     });
   }
 
@@ -35,7 +43,6 @@ export class ProductsComponent implements OnInit {
   addToCart(product) {
 
     console.log(product, 'addToCart');
-
     this.cardNumber = this.cardNumber + 1;
     this.cardAmount = this.cardAmount + product.amount;
 

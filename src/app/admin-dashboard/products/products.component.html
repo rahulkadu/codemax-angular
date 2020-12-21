@@ -1,11 +1,14 @@
 <div class="main-outside">
-	<h1 class="main-header" i18n="Admin Products Header|demo@@AdminProductsHeader">Products</h1>
+	<h1 class="main-header" i18n="Admin Products Header|demo@@AdminProductsHeader">Products</h1> 
+  <!-- <h3 *ngIf="!loader" class="pull-right">Total: {{ productsList.length }}</h3> -->
 	
   <div class="container" style="min-height: 300px;">
 
     <div class="row">
 
-      <div class="col-md-12"  *ngIf="productsList.length == 0">
+      <mat-spinner [diameter]="50" style="float:left;" *ngIf="loader"></mat-spinner>
+
+      <div class="col-md-12"  *ngIf="productsList.length == 0 && !loader">
         <h3 i18n="Admin Products Header|demo@@AdminProductsNotFound">No Products found.</h3>
       </div>
 
@@ -14,9 +17,6 @@
           <img class="card-img-top product-image" src="{{data.url}}">
           <div class="card-body">
             <p class="card-text">{{data.name}} / ${{data.amount}}</p>
-            <!-- <div class="d-flex justify-content-between align-items-center">
-               <button type="button" style="width:100%;" class="btn btn-sm btn-outline-secondary" (click)="addToCart(data)">Add To Cart</button>
-            </div> -->
           </div>
         </div>
       </div>

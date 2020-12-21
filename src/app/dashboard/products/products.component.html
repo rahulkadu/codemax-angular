@@ -6,8 +6,10 @@
   <div class="container" style="min-height: 300px;">
 
     <div class="row">
+      
+      <mat-spinner [diameter]="50" style="float:left;" *ngIf="loader"></mat-spinner>
 
-      <div class="col-md-12"  *ngIf="productsList.length == 0">
+      <div class="col-md-12"  *ngIf="productsList.length == 0 && !loader">
         <h3 i18n="User Products Not Found|demo@@UserProductsNotFound">No Products found.</h3>
       </div>
 

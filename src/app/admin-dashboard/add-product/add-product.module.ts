@@ -7,13 +7,15 @@ import { AddProductComponent } from './add-product.component';
 import { AppService } from '../../app.service';
 import { FormsModule } from '@angular/forms';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [AddProductComponent],
   imports: [
     CommonModule,
     AddProductRoutingModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [AppService],
 })

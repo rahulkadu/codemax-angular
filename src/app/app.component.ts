@@ -16,12 +16,6 @@ export class AppComponent {
 
   ngOnInit() {
 
-    // var url = this.activatedRoute.snapshot.url;
-
-    // var url = this.activatedRoute.url;
-    // var url = this.router.UrlSegment;
-    // console.log(url);
-
     var currentRoute = this.router.url; 
     console.log('currentRoute', currentRoute); 
 
@@ -32,12 +26,9 @@ export class AppComponent {
       }
 
     })
-
   }
 
-  
-
-  languageList = [ // <--- add this
+  languageList = [ 
     { code: 'en', label: 'English' },
     { code: 'hi', label: 'Hindi' }
   ];
@@ -45,7 +36,6 @@ export class AppComponent {
   langChange = (path) => {
 
     console.log('path',path);
-
     this.selectedLang = path;
     this.router.navigate(['/'+path+'/']);
   }

@@ -6,6 +6,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router, Event, NavigationStart } from '@angular/router';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,6 +20,7 @@ export class RegisterComponent implements OnInit {
   email: string = '';
   password: string = '';
   password_confirm: string = '';
+  loader: boolean = false;
 
   constructor(public appService: AppService, private toastr: ToastrService,private router: Router) { }
 
@@ -26,43 +30,27 @@ export class RegisterComponent implements OnInit {
 
   register = () => {
 
-        if (this.password_confirm != this.password) {
-          this.toastr.error("Password doesn't match.", 'Error Occured');
-          return;
-        }
-
-        let params = { username: this.username,email: this.email, password: this.password }
-        this.appService.register(params).subscribe((res: any) => {
-
-          this.toastr.success('Registered Successfully', '');
-
-            // this.appService.getUserDetails().subscribe((res: any) => {
-
-
-            //   console.log(res);
-            //   var user1 = res.response;
-            //     localStorage.setItem('userDetails', JSON.stringify(user1));
-
-            //     this.toastr.success('Welcome', '');
-            
-                // setTimeout((router: Router) => {
-                    // this.router.navigateByUrl('/patients');
-
-                    // var page_link = user1.pages[0].link;
-
-                    // console.log('page_link', page_link);
-
-                    this.router.navigate(['login']);
-                // }, 200);
-
-                // this.loader=false;
-
-
-        }, (err) => {
-                console.log(err);
-                this.toastr.error(err.error.message, 'Error Occured');
-        });
+    this.loader = true;
+    if (this.password_confirm != this.password) {
+      this.toastr.error("Password doesn't match.", 'Error Occured');
+      return;
     }
+
+    let params = { username: this.username,email: this.email, password: this.password }
+    this.appService.register(params).subscribe((res: any) => {
+
+      this.loader = false;
+      this.toastr.success('Registered Successfully', '');
+      this.router.navigate(['login']);
+
+    }, (err) => {
+
+      this.loader = false;
+      console.log(err);
+      this.toastr.error(err.error.message, 'Error Occured');
+      
+    });
+  }
 
   navigateToPage = (path) => {
 

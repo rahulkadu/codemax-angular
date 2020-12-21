@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

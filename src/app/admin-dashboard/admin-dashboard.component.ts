@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router, Event, NavigationStart } from '@angular/router';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
